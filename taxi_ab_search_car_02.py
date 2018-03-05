@@ -106,7 +106,7 @@ class Profit_calculator(object):
     def cost_function(self) -> int:
         if not self.is_finish_before_deadline: return None
         # profit = self.profit - self.distance_from_car_to_route #- self.wait_time
-        profit = - self.distance_from_car_to_route - self.wait_time
+        profit = self.bonus - self.distance_from_car_to_route - self.wait_time
         return profit
 
 
