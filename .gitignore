@@ -1,21 +1,3 @@
-Skip to content
-This repository
-Search
-Pull requests
-Issues
-Marketplace
-Explore
- @zgushonka
- Sign out
-2,443
-62,334 28,342 github/gitignore
- Code  Pull requests 176  Projects 0  Insights
-gitignore/Python.gitignore
-f651f0d  29 days ago
-@raimon49 raimon49 Add ignore '.pytest_cache' directory in Unit test section
-@arcresu @shiftkey @Lucretiel @Harrison-G @jwg4 @Metallicow @misaelnieto @pmsosa @svkampen @vltr @matheussl @hugovk @ghisvail @EvandroLG @DSIW @toanant @2Cubed @weinihou @Visgean @nvie @skuschel @sigo @scari @borntyping @roll @rmax
-     
-106 lines (85 sloc)  1.19 KB
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
