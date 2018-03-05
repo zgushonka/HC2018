@@ -100,13 +100,11 @@ class Profit_calculator(object):
 
     def calc_waitTime(self) -> int:
         time_before_route_starts = (self.route.start_time - self.car.current_time)
-        wait_time = time_before_route_starts #- self.distance_from_car_to_route
+        wait_time = time_before_route_starts
         return wait_time
 
     def cost_function(self) -> int:
         if not self.is_finish_before_deadline: return None
-        # profit = self.profit - self.distance_from_car_to_route #- self.wait_time
-
         profit = self.bonus - self.distance_from_car_to_route - max(0, self.wait_time)
         return profit
 
@@ -215,6 +213,6 @@ if __name__ == '__main__':
     print('total_our_score - {}'.format(total_our_score))
     print('total efficiency - {:0.2f}%'.format(total_our_score/total_max_score*100))
     end = time.time()
-    print('total time - {:0.2}s'.format(end - start))
+    print('total time - {:0.2f}s'.format(end - start))
 
 
