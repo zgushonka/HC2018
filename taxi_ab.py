@@ -100,14 +100,14 @@ class Profit_calculator(object):
 
     def calc_waitTime(self) -> int:
         time_before_route_starts = (self.route.start_time - self.car.current_time)
-        wait_time = time_before_route_starts - self.distance_from_car_to_route
+        wait_time = time_before_route_starts #- self.distance_from_car_to_route
         return wait_time
 
     def cost_function(self) -> int:
         if not self.is_finish_before_deadline: return None
         # profit = self.profit - self.distance_from_car_to_route #- self.wait_time
-        
-        profit = self.bonus - self.distance_from_car_to_route - self.wait_time
+
+        profit = self.bonus - self.distance_from_car_to_route - max(0, self.wait_time)
         return profit
 
 
@@ -174,9 +174,9 @@ if __name__ == '__main__':
     data_sets = {
         'a_example': 'a_example.in',
         'b_should_be_easy': 'b_should_be_easy.in',
-        # 'c_no_hurry': 'c_no_hurry.in',
-        # 'd_metropolis': 'd_metropolis.in',
-        # 'e_high_bonus': 'e_high_bonus.in'
+        'c_no_hurry': 'c_no_hurry.in',
+        'd_metropolis': 'd_metropolis.in',
+        'e_high_bonus': 'e_high_bonus.in'
     }
 
     total_max_distance = 0
